@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-public class PassRef
+﻿public class PassRef
 {
     private int SomePassValue1(ref int value)
     {

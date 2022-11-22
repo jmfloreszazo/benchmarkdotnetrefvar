@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-public class PassValue
+﻿public class PassValue
 {
     private int SomePassValue1(int value)
     {
