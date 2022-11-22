@@ -2,23 +2,25 @@
 
 public class PassValue
 {
-    private static void SomePassValue1(string value)
+    private string SomePassValue1(string value)
     {
-        SomePassValue2(value);
+        return SomePassValue2(value);
     }
 
-    private static void SomePassValue2(string value)
+    private string SomePassValue2(string value)
     {
-        SomePassValue3(value);
+        return SomePassValue3(value);
     }
 
-    private static void SomePassValue3(string value)
+    private string SomePassValue3(string value)
     {
-        SomePassValue4(value);
+        return SomePassValue4(value);
     }
 
-    private static void SomePassValue4(string value)
+    private string SomePassValue4(string value)
     {
+        value = "test";
+        return value;
     }
 
     private string LoremIpsum(int minWords, int maxWords,

@@ -2,23 +2,25 @@
 
 public class PassRef
 {
-    private static void SomePassRef1(string value)
+    private string SomePassValue1(ref string value)
     {
-        SomePassRef2(value);
+        return SomePassValue2(ref value);
     }
 
-    private static void SomePassRef2(string value)
+    private string SomePassValue2(ref string value)
     {
-        SomePassRef3(value);
+        return SomePassValue3(ref value);
     }
 
-    private static void SomePassRef3(string value)
+    private string SomePassValue3(ref string value)
     {
-        SomePassRef4(value);
+        return SomePassValue4(ref value);
     }
 
-    private static void SomePassRef4(string value)
+    private string SomePassValue4(ref string value)
     {
+        var result = "test";
+        return result;
     }
 
     private string LoremIpsum(int minWords, int maxWords,
@@ -60,6 +62,6 @@ public class PassRef
         var passMe = LoremIpsum(10, 10, 10, 10, 10);
         for (var x = 0; x < 20; x++)
         for (var i = 0; i < 50000000; i++)
-            SomePassRef1(passMe);
+            SomePassValue1(ref passMe);
     }
 }
